@@ -1,12 +1,13 @@
 """A madlib game that compliments its users."""
 
-from random import choice
+from random import choice, randint
 
 from flask import Flask, render_template, request
 
 # "__name__" is a special Python variable for the name of the current module.
 # Flask wants to know this to know what any imported things are relative to.
 app = Flask(__name__)
+
 
 AWESOMENESS = [
     "awesome",
@@ -70,7 +71,11 @@ def show_madlib():
     adverb = request.args.get("adverb")
     noun2 = request.args.get("noun2")
     adverb2 = request.args.get("adverb2")
-    return render_template("madlib.html", person=person, 
+
+    template_num = str(randint(1,2))
+    template = "madlib" + template_num + ".html"
+
+    return render_template(template, person=person, 
                             color=color, noun=noun, adjective=adjective,
                             noun2=noun2, adverb2=adverb2)
                             

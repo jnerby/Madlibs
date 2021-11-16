@@ -1,44 +1,44 @@
-<!doctype html>
-<html>
-<head>
-  <title>Madlibs Game</title>
-</head>
-<body>
+{% extends 'layout.html' %}
 
-<h1>Hi There!</h1>
+{% block title %}Madlibs Game{% endblock %}
 
-<form action="/madlib">
-    <input type="text" name="person" placeholder="Enter a person's name">
-    <br>
-    <input type="text" name="noun" placeholder="Enter a noun">
-    <br>
-    <input type="text" name="adjective" placeholder="Enter an adjective">
-    <br>
-    <input type="text" name="adverb" placeholder="Enter an adverb">
-    <br>
-    <label>Choose a noun</label>
-    <input type="radio" name="noun2" value="chinchilla">
-    <label>chinchilla</label>
-    <input type="radio" name="noun2" value="vampire">
-    <label>vampire</label>
-    <input type="radio" name="noun2" value="burrito">
-    <label>burrito</label>
-    <br>
-    <label>Pick a color:</label>
-    <select name="color">
-        <option value="magenta">magenta</option>
-        <option value="black">black</option>
-        <option value="teal">teal</option>
-    </select>
-    <br>
-    <label>Pick an adverb:</label>
-    <select name="adverb2">
-        <option value="staunchly">staunchly</option>
-        <option value="feverishly">feverishly</option>
-        <option value="swimmingly">swimmingly</option>
-    </select>
-    <br>
-    <input type="submit">
-  </form>
-</body>
-</html>
+{% block content %}
+<div>
+  <h1>Let's Play Madlibs!</h1>
+    <form action="/madlib">
+      <input type="text" name="person" placeholder="Enter a person's name">
+      <br>
+      <input type="text" name="noun" placeholder="Enter a noun">
+      <br>
+      <input type="text" name="adjective" placeholder="Enter an adjective">
+      <br>
+      <input type="text" name="adverb" placeholder="Enter an adverb">
+      <br>
+      <label>Choose a noun</label>
+      <input type="radio" name="noun2" value="chinchilla">
+      <label>chinchilla</label>
+      <input type="radio" name="noun2" value="vampire">
+      <label>vampire</label>
+      <input type="radio" name="noun2" value="burrito">
+      <label>burrito</label>
+      <br>
+      <label>Pick a color:</label>
+      <select name="color">
+          <option value="magenta">magenta</option>
+          <option value="black">black</option>
+          <option value="teal">teal</option>
+      </select>
+      <br>
+      <label>Pick an adverb:</label>
+      <select name="adverb2">
+          <option value="staunchly">staunchly</option>
+          <option value="feverishly">feverishly</option>
+          <option value="swimmingly">swimmingly</option>
+      </select>
+      <br>
+      <input type="submit">
+    </form>
+
+</div>
+
+{% endblock %}
