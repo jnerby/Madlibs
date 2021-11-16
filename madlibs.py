@@ -25,15 +25,15 @@ AWESOMENESS = [
     "lovely",
 ]
 
-
+# change landing page to hello
 @app.route("/")
-def start_here():
-    """Display homepage."""
+# def start_here():
+#     """Display homepage."""
 
-    return "Hi! This is the home page."
+#     return "Hi! This is the home page."
 
 
-@app.route("/hello")
+# @app.route("/hello")
 def say_hello():
     """Say hello to user."""
 
@@ -67,8 +67,12 @@ def show_madlib():
     color = request.args.get("color")
     noun = request.args.get("noun")
     adjective = request.args.get("adjective")
+    adverb = request.args.get("adverb")
+    noun2 = request.args.get("noun2")
+    adverb2 = request.args.get("adverb2")
     return render_template("madlib.html", person=person, 
-                            color=color, noun=noun, adjective=adjective)
+                            color=color, noun=noun, adjective=adjective,
+                            noun2=noun2, adverb2=adverb2)
                             
 if __name__ == "__main__":
     # Setting debug=True gives us error messages in the browser and also

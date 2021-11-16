@@ -8,8 +8,21 @@
 <h1>Hi There!</h1>
 
 <form action="/madlib">
-    <label>Enter a person's name</label>
-    <input type="text" name="person">
+    <input type="text" name="person" placeholder="Enter a person's name">
+    <br>
+    <input type="text" name="noun" placeholder="Enter a noun">
+    <br>
+    <input type="text" name="adjective" placeholder="Enter an adjective">
+    <br>
+    <input type="text" name="adverb" placeholder="Enter an adverb">
+    <br>
+    <label>Choose a noun</label>
+    <input type="radio" name="noun2" value="chinchilla">
+    <label>chinchilla</label>
+    <input type="radio" name="noun2" value="vampire">
+    <label>vampire</label>
+    <input type="radio" name="noun2" value="burrito">
+    <label>burrito</label>
     <br>
     <label>Pick a color:</label>
     <select name="color">
@@ -18,18 +31,14 @@
         <option value="teal">teal</option>
     </select>
     <br>
-    <label>Choose a noun</label>
-    <input type="radio" name="noun" value="chinchilla">
-    <label>chinchilla</label>
-    <input type="radio" name="noun" value="vampire">
-    <label>vampire</label>
-    <input type="radio" name="noun" value="burrito">
-    <label>burrito</label>
-    <br>
-    <label>Choose an adjective</label>
-    <input type="text" name="adjective">
+    <label>Pick an adverb:</label>
+    <select name="adverb2">
+        <option value="staunchly">staunchly</option>
+        <option value="feverishly">feverishly</option>
+        <option value="swimmingly">swimmingly</option>
+    </select>
     <br>
     <input type="submit">
-</form>
+  </form>
 </body>
 </html>
