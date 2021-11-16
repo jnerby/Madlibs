@@ -4,7 +4,12 @@
 
 {% block content %}
 <div>
-  Hi {{ person }}! I think you're {{ compliment }}!
+  Hi {{ person }}! I think you're:
+  <ul>
+  {% for compliment in compliments %}
+    <li>{{ compliment }}</li>
+  {% endfor %}
+  </ul>
   <form action="/game">
     <label>Would you like to play a game?</label>
     <input type="radio" name="game" value="Yes">
